@@ -1,8 +1,28 @@
-.btn-primary {
-    background-color: #004d99; /* Example School Blue */
-    border-color: #004d99;
+:root {
+    --bgb-blue: #002d5b;
+    --bgb-yellow: #ffcc00;
+    --bgb-light: #f8f9fa;
 }
-.navbar-brand {
-    font-weight: bold;
-    letter-spacing: 1px;
+
+body { font-family: 'Poppins', sans-serif; color: #333; }
+
+/* Global Color Overrides */
+.bg-bgb-blue { background-color: var(--bgb-blue) !important; }
+.text-bgb-blue { color: var(--bgb-blue) !important; }
+.btn-primary { background-color: var(--bgb-blue); border-color: var(--bgb-blue); }
+.btn-warning { background-color: var(--bgb-yellow); border-color: var(--bgb-yellow); color: #000 !important; }
+
+/* Navbar Styling */
+.navbar { background-color: var(--bgb-blue) !important; }
+
+/* Hero and Section Titles */
+.section-title::after { background: var(--bgb-yellow) !important; }
+
+/* Gallery Card Styling */
+.gallery-item img {
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: 0.3s;
 }
+.gallery-item img:hover { transform: scale(1.03); cursor: pointer; }
