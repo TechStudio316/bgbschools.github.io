@@ -1,30 +1,26 @@
 :root {
-    /* Updated brand colors */
     --bgb-maroon: #800000;
     --bgb-yellow: #ffcc00;
-    --bgb-light: #fdfdfd;
+    --bgb-light: #f8f9fa;
     --white: #ffffff;
 }
 
 body { 
     font-family: 'Poppins', sans-serif; 
     color: #333; 
-    background-color: var(--bgb-light);
 }
 
 /* --- Global Color Overrides --- */
-
-/* Use this class for any section that needs a maroon background */
 .bg-bgb-maroon { 
     background-color: var(--bgb-maroon) !important; 
     color: var(--white) !important; 
 }
 
-/* Ensures all text elements inside maroon sections are white */
-.bg-bgb-maroon h1, .bg-bgb-maroon h2, .bg-bgb-maroon h3, 
-.bg-bgb-maroon h4, .bg-bgb-maroon h5, .bg-bgb-maroon p,
-.bg-bgb-maroon i {
-    color: var(--white) !important;
+/* Force white text for children of maroon sections */
+.bg-bgb-maroon h4, 
+.bg-bgb-maroon p, 
+.bg-bgb-maroon i { 
+    color: var(--white) !important; 
 }
 
 .text-bgb-maroon { color: var(--bgb-maroon) !important; }
@@ -34,12 +30,10 @@ body {
     background-color: var(--bgb-maroon) !important; 
     border-color: var(--bgb-maroon) !important; 
     color: var(--white) !important; 
-    transition: 0.3s;
 }
 
 .btn-primary:hover {
-    background-color: #600000 !important; /* Slightly darker maroon */
-    border-color: #600000 !important;
+    background-color: #600000 !important;
 }
 
 .btn-warning { 
@@ -49,7 +43,7 @@ body {
     font-weight: 600;
 }
 
-/* --- Navbar Fix --- */
+/* --- Navbar Styling --- */
 .navbar { 
     background-color: var(--bgb-maroon) !important; 
     border-bottom: 3px solid var(--bgb-yellow);
@@ -65,6 +59,20 @@ body {
 }
 
 /* --- Hero & Sections --- */
+.hero-slider img { 
+    height: 600px; 
+    object-fit: cover; 
+    filter: brightness(50%); 
+}
+
+.carousel-caption-box {
+    background: rgba(128, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 15px;
+    display: inline-block;
+    border: 1px solid var(--bgb-yellow);
+}
+
 .section-title { 
     position: relative; 
     margin-bottom: 40px; 
@@ -75,7 +83,7 @@ body {
 .section-title::after { 
     content: ''; 
     width: 60px; 
-    height: 4px; 
+    height: 3px; 
     background: var(--bgb-yellow) !important; 
     position: absolute; 
     bottom: -10px; 
@@ -83,23 +91,12 @@ body {
     transform: translateX(-50%); 
 }
 
-/* --- Gallery Styling --- */
-.gallery-item img {
-    height: 250px;
-    object-fit: cover;
-    border-radius: 8px;
-    transition: 0.4s;
-    border: 2px solid transparent;
+/* --- Gallery & Cards --- */
+.activity-card { 
+    transition: transform 0.3s; 
+    border: none; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+    border-bottom: 4px solid var(--bgb-yellow); 
 }
 
-.gallery-item img:hover { 
-    transform: translateY(-5px); 
-    cursor: pointer; 
-    border-color: var(--bgb-maroon);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-}
-
-/* --- Footer --- */
-footer.bg-dark {
-    background-color: #1a1a1a !important;
-}
+.activity-card:hover { transform: translateY(-10px); }
