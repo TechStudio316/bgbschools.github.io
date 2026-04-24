@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admissions | BGB Group of Schools</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body { font-family: 'Poppins', sans-serif; background-color: #f4f7f9; }
+        .admission-header { background: linear-gradient(rgba(0, 77, 153, 0.9), rgba(0, 77, 153, 0.9)), url('assets/images/activity1.jpg'); background-size: cover; color: white; padding: 60px 0; }
+        .card { border: none; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        .requirement-list i { color: #004d99; margin-right: 10px; }
+        .form-container { position: relative; overflow: hidden; width: 100%; padding-top: 150%; /* Adjust height for Google Form */ }
+        .form-container iframe { position: absolute; top: 0; left: 0; bottom: 0; right: 0; width: 100%; height: 100%; border: none; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">BGB Group of Schools</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="academics.html">Academics</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="admissions.html">Admissions</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="admission-header text-center">
+        <div class="container">
+            <h1 class="display-5 fw-bold">Online Admission Portal</h1>
+            <p class="lead">Begin your child's journey toward excellence today.</p>
+        </div>
+    </header>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-5">
+                
+                <div class="col-lg-5">
+                    <div class="card p-4 mb-4">
+                        <h4 class="fw-bold mb-4">Admission Checklist</h4>
+                        <ul class="list-unstyled requirement-list">
+                            <li class="mb-3"><i class="fas fa-check-circle"></i> Recent Passport Photographs (4 copies)</li>
+                            <li class="mb-3"><i class="fas fa-check-circle"></i> Birth Certificate (Original & Photocopy)</li>
+                            <li class="mb-3"><i class="fas fa-check-circle"></i> Last Academic Result from Previous School</li>
+                            <li class="mb-3"><i class="fas fa-check-circle"></i> Transfer Certificate (For Secondary entrants)</li>
+                            <li class="mb-3"><i class="fas fa-check-circle"></i> Medical Fitness Report</li>
+                        </ul>
+                    </div>
+
+                    <div class="card p-4 bg-primary text-white">
+                        <h5>Need Help?</h5>
+                        <p class="small">If you encounter any issues with the online form, please visit our campus in Akure or call our admissions office.</p>
+                        <a href="tel:+2340000000000" class="btn btn-light btn-sm fw-bold">Call Admissions</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-7">
+                    <div class="card p-2">
+                        <div class="form-container">
+                            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfV-xqrdPEcZSP_Ir0lzHnZZHkxpo48SmhqCRKrsZrzjlcJAQ/viewform?usp=publish-editor">
+                                Loading…
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container text-center">
+            <p class="small m-0">&copy; 2026 BGB Group of Schools, Akure. Raising future greats.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
