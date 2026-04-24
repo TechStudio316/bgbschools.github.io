@@ -1,85 +1,81 @@
 :root {
-    --bgb-blue: #002d5b;
+    /* Updated brand colors */
+    --bgb-maroon: #800000;
     --bgb-yellow: #ffcc00;
-    --bgb-light: #f8f9fa;
+    --bgb-light: #fdfdfd;
     --white: #ffffff;
 }
 
 body { 
     font-family: 'Poppins', sans-serif; 
     color: #333; 
-    line-height: 1.6;
+    background-color: var(--bgb-light);
 }
 
-/* --- Global Color Overrides & Visibility Fixes --- */
+/* --- Global Color Overrides --- */
 
-/* Force white text when using the blue background utility */
-.bg-bgb-blue { 
-    background-color: var(--bgb-blue) !important; 
+/* Use this class for any section that needs a maroon background */
+.bg-bgb-maroon { 
+    background-color: var(--bgb-maroon) !important; 
     color: var(--white) !important; 
 }
 
-/* Ensure all headings and paragraphs inside a blue background are white */
-.bg-bgb-blue h1, .bg-bgb-blue h2, .bg-bgb-blue h3, 
-.bg-bgb-blue h4, .bg-bgb-blue h5, .bg-bgb-blue p,
-.bg-bgb-blue i {
+/* Ensures all text elements inside maroon sections are white */
+.bg-bgb-maroon h1, .bg-bgb-maroon h2, .bg-bgb-maroon h3, 
+.bg-bgb-maroon h4, .bg-bgb-maroon h5, .bg-bgb-maroon p,
+.bg-bgb-maroon i {
     color: var(--white) !important;
 }
 
-.text-bgb-blue { color: var(--bgb-blue) !important; }
+.text-bgb-maroon { color: var(--bgb-maroon) !important; }
 
-/* --- Button Enhancements --- */
+/* --- Button Styling --- */
 .btn-primary { 
-    background-color: var(--bgb-blue) !important; 
-    border-color: var(--bgb-blue) !important; 
+    background-color: var(--bgb-maroon) !important; 
+    border-color: var(--bgb-maroon) !important; 
     color: var(--white) !important; 
+    transition: 0.3s;
 }
 
 .btn-primary:hover {
-    background-color: #003d7a !important; /* Slightly lighter blue on hover */
-    color: var(--white) !important;
+    background-color: #600000 !important; /* Slightly darker maroon */
+    border-color: #600000 !important;
 }
 
 .btn-warning { 
     background-color: var(--bgb-yellow) !important; 
     border-color: var(--bgb-yellow) !important; 
-    color: #000 !important; /* Keep text black for high contrast on yellow */
+    color: #000 !important; 
     font-weight: 600;
 }
 
 /* --- Navbar Fix --- */
 .navbar { 
-    background-color: var(--bgb-blue) !important; 
+    background-color: var(--bgb-maroon) !important; 
+    border-bottom: 3px solid var(--bgb-yellow);
 }
 
-/* Ensure nav links are visible (White) */
 .navbar-dark .navbar-nav .nav-link {
-    color: rgba(255, 255, 255, 0.8) !important;
+    color: rgba(255, 255, 255, 0.9) !important;
 }
 
 .navbar-dark .navbar-nav .nav-link.active, 
 .navbar-dark .navbar-nav .nav-link:hover {
-    color: var(--bgb-yellow) !important; /* Yellow highlight on hover/active */
+    color: var(--bgb-yellow) !important;
 }
 
-/* --- Hero & Titles --- */
-.carousel-caption {
-    background: rgba(0, 0, 0, 0.4); /* Dark overlay to help text pop over images */
-    border-radius: 15px;
-    padding: 20px;
-}
-
+/* --- Hero & Sections --- */
 .section-title { 
     position: relative; 
     margin-bottom: 40px; 
     font-weight: 700; 
-    color: var(--bgb-blue);
+    color: var(--bgb-maroon);
 }
 
 .section-title::after { 
     content: ''; 
     width: 60px; 
-    height: 3px; 
+    height: 4px; 
     background: var(--bgb-yellow) !important; 
     position: absolute; 
     bottom: -10px; 
@@ -87,25 +83,23 @@ body {
     transform: translateX(-50%); 
 }
 
-/* --- Gallery --- */
+/* --- Gallery Styling --- */
 .gallery-item img {
     height: 250px;
     object-fit: cover;
-    border-radius: 10px;
-    transition: 0.3s;
-    border: 3px solid transparent;
+    border-radius: 8px;
+    transition: 0.4s;
+    border: 2px solid transparent;
 }
 
 .gallery-item img:hover { 
-    transform: scale(1.03); 
+    transform: translateY(-5px); 
     cursor: pointer; 
-    border-color: var(--bgb-yellow);
+    border-color: var(--bgb-maroon);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
 
-/* Footer Visibility */
+/* --- Footer --- */
 footer.bg-dark {
-    background-color: #111 !important;
-}
-footer p, footer h6 {
-    color: #ccc !important;
+    background-color: #1a1a1a !important;
 }
