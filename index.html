@@ -8,17 +8,65 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Mobile Floating Action Button (FAB) */
+        .mobile-enroll-fab {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1050;
+            display: none; /* Hidden by default on desktop */
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            border-radius: 50px;
+            padding: 12px 25px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        /* Show FAB only on mobile screens */
+        @media (max-width: 991px) {
+            .mobile-enroll-fab {
+                display: block;
+            }
+            .navbar-brand {
+                font-size: 1.1rem;
+            }
+        }
+
+        /* Adjust Hero height for better mobile viewing */
+        @media (max-width: 768px) {
+            .hero-slider img { height: 450px !important; }
+            .display-4 { font-size: 1.8rem; }
+        }
+    </style>
 </head>
 <body>
+
+    <a href="admissions.html" class="btn btn-warning mobile-enroll-fab">
+        <i class="fas fa-edit me-2"></i>Enroll Now
+    </a>
 
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top shadow">
         <div class="container">
             <a class="navbar-brand fw-bold" href="index.html">
-                <i class="fas fa-graduation-cap me-2 text-warning"></i>BGB Group of Schools
+                <i class="fas fa-graduation-cap me-2 text-warning"></i>BGB Schools
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            
+            <div class="d-flex align-items-center">
+                <a href="admissions.html" class="btn btn-warning btn-sm fw-bold d-lg-none me-2">Enroll</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
@@ -26,7 +74,7 @@
                     <li class="nav-item"><a class="nav-link" href="academics.html">Academics</a></li>
                     <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
                     <li class="nav-item"><a class="nav-link" href="facilities.html">WAEC/NECO</a></li>
-                    <li class="nav-item"><a class="btn btn-warning fw-bold ms-lg-3" href="admissions.html">Enroll Now</a></li>
+                    <li class="nav-item"><a class="btn btn-warning fw-bold ms-lg-3 d-none d-lg-block" href="admissions.html">Enroll Now</a></li>
                 </ul>
             </div>
         </div>
@@ -38,8 +86,9 @@
                 <img src="assets/images/activity1.jpg" class="d-block w-100" alt="BGB Assembly">
                 <div class="carousel-caption">
                     <div class="carousel-caption-box">
-                        <h1 class="display-4 fw-bold text-white">Nurturing Excellence in Akure</h1>
-                        <p class="lead text-white">Raising future greats through quality education and discipline.</p>
+                        <h1 class="display-4 fw-bold text-white">Nurturing Excellence</h1>
+                        <p class="lead text-white d-none d-sm-block">Raising future greats through quality education.</p>
+                        <a href="admissions.html" class="btn btn-warning btn-lg fw-bold mt-2">Apply for Admission</a>
                     </div>
                 </div>
             </div>
@@ -47,8 +96,9 @@
                 <img src="assets/images/activity2.jpg" class="d-block w-100" alt="Sports Day">
                 <div class="carousel-caption">
                     <div class="carousel-caption-box">
-                        <h1 class="display-4 fw-bold text-white">Comprehensive Learning</h1>
-                        <p class="lead text-white">From Preschool to Secondary, we build total individuals.</p>
+                        <h1 class="display-4 fw-bold text-white">Approved Exam Center</h1>
+                        <p class="lead text-white d-none d-sm-block">Official center for WAEC and NECO examinations.</p>
+                        <a href="facilities.html" class="btn btn-warning btn-lg fw-bold mt-2">Our Facilities</a>
                     </div>
                 </div>
             </div>
@@ -69,7 +119,7 @@
                     <h4 class="fw-bold">Preschool & Primary</h4>
                     <p class="small">Strong foundations for early childhood education.</p>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 border-start border-end border-secondary border-opacity-25">
                     <i class="fas fa-university fa-3x text-warning mb-3"></i>
                     <h4 class="fw-bold">Secondary School</h4>
                     <p class="small">Academic brilliance and character development.</p>
@@ -121,7 +171,7 @@
             <div class="p-5 border rounded shadow-sm bg-white mt-4">
                 <i class="fab fa-instagram fa-3x mb-3" style="color: #E1306C;"></i>
                 <h4 class="fw-bold">Follow Our Journey</h4>
-                <p>Stay updated with daily life, news, and events at BGB Schools.</p>
+                <p>Stay updated with daily life at BGB Schools.</p>
                 <a href="https://instagram.com/bgbschools" target="_blank" class="btn btn-outline-danger px-4 fw-bold">Follow on Instagram</a>
             </div>
         </div>
@@ -129,7 +179,7 @@
 
     <footer class="bg-dark text-white py-5">
         <div class="container text-center">
-            <p class="mb-2">&copy; 2026 BGB Group of Schools, Akure. | Raising Future Greats.</p>
+            <p class="mb-2">&copy; 2026 BGB Group of Schools, Akure.</p>
             <div class="mt-3">
                 <a href="#" class="text-white mx-3"><i class="fab fa-facebook fa-lg"></i></a>
                 <a href="https://instagram.com/bgbschools" class="text-white mx-3"><i class="fab fa-instagram fa-lg"></i></a>
