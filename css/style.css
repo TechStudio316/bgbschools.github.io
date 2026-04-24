@@ -2,27 +2,110 @@
     --bgb-blue: #002d5b;
     --bgb-yellow: #ffcc00;
     --bgb-light: #f8f9fa;
+    --white: #ffffff;
 }
 
-body { font-family: 'Poppins', sans-serif; color: #333; }
+body { 
+    font-family: 'Poppins', sans-serif; 
+    color: #333; 
+    line-height: 1.6;
+}
 
-/* Global Color Overrides */
-.bg-bgb-blue { background-color: var(--bgb-blue) !important; }
+/* --- Global Color Overrides & Visibility Fixes --- */
+
+/* Force white text when using the blue background utility */
+.bg-bgb-blue { 
+    background-color: var(--bgb-blue) !important; 
+    color: var(--white) !important; 
+}
+
+/* Ensure all headings and paragraphs inside a blue background are white */
+.bg-bgb-blue h1, .bg-bgb-blue h2, .bg-bgb-blue h3, 
+.bg-bgb-blue h4, .bg-bgb-blue h5, .bg-bgb-blue p,
+.bg-bgb-blue i {
+    color: var(--white) !important;
+}
+
 .text-bgb-blue { color: var(--bgb-blue) !important; }
-.btn-primary { background-color: var(--bgb-blue); border-color: var(--bgb-blue); }
-.btn-warning { background-color: var(--bgb-yellow); border-color: var(--bgb-yellow); color: #000 !important; }
 
-/* Navbar Styling */
-.navbar { background-color: var(--bgb-blue) !important; }
+/* --- Button Enhancements --- */
+.btn-primary { 
+    background-color: var(--bgb-blue) !important; 
+    border-color: var(--bgb-blue) !important; 
+    color: var(--white) !important; 
+}
 
-/* Hero and Section Titles */
-.section-title::after { background: var(--bgb-yellow) !important; }
+.btn-primary:hover {
+    background-color: #003d7a !important; /* Slightly lighter blue on hover */
+    color: var(--white) !important;
+}
 
-/* Gallery Card Styling */
+.btn-warning { 
+    background-color: var(--bgb-yellow) !important; 
+    border-color: var(--bgb-yellow) !important; 
+    color: #000 !important; /* Keep text black for high contrast on yellow */
+    font-weight: 600;
+}
+
+/* --- Navbar Fix --- */
+.navbar { 
+    background-color: var(--bgb-blue) !important; 
+}
+
+/* Ensure nav links are visible (White) */
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.navbar-dark .navbar-nav .nav-link.active, 
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: var(--bgb-yellow) !important; /* Yellow highlight on hover/active */
+}
+
+/* --- Hero & Titles --- */
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.4); /* Dark overlay to help text pop over images */
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.section-title { 
+    position: relative; 
+    margin-bottom: 40px; 
+    font-weight: 700; 
+    color: var(--bgb-blue);
+}
+
+.section-title::after { 
+    content: ''; 
+    width: 60px; 
+    height: 3px; 
+    background: var(--bgb-yellow) !important; 
+    position: absolute; 
+    bottom: -10px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+}
+
+/* --- Gallery --- */
 .gallery-item img {
     height: 250px;
     object-fit: cover;
     border-radius: 10px;
     transition: 0.3s;
+    border: 3px solid transparent;
 }
-.gallery-item img:hover { transform: scale(1.03); cursor: pointer; }
+
+.gallery-item img:hover { 
+    transform: scale(1.03); 
+    cursor: pointer; 
+    border-color: var(--bgb-yellow);
+}
+
+/* Footer Visibility */
+footer.bg-dark {
+    background-color: #111 !important;
+}
+footer p, footer h6 {
+    color: #ccc !important;
+}
