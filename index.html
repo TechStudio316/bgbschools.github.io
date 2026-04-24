@@ -5,70 +5,164 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BGB Group of Schools | Raising Future Greats</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        body { font-family: 'Poppins', sans-serif; }
+        .hero-slider img { height: 500px; object-fit: cover; filter: brightness(70%); }
+        .section-title { position: relative; margin-bottom: 40px; font-weight: 700; }
+        .section-title::after { content: ''; width: 60px; height: 3px; background: #004d99; position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%); }
+        .activity-card { transition: transform 0.3s; border: none; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .activity-card:hover { transform: translateY(-10px); }
+        .instagram-placeholder { background: #f8f9fa; border-radius: 15px; padding: 40px; border: 2px dashed #dee2e6; }
+    </style>
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
         <div class="container">
-            <a class="navbar-brand" href="index.html">BGB Group of Schools</a>
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="fas fa-graduation-cap me-2"></i>BGB Group of Schools
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="academics.html">Academics</a></li>
-                    <li class="nav-item"><a class="nav-link" href="facilities.html">Facilities</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                    <li class="nav-item"><a class="btn btn-primary ms-lg-3" href="admissions.html">Apply Now</a></li>
+                    <li class="nav-item"><a class="nav-link" href="facilities.html">WAEC/NECO</a></li>
+                    <li class="nav-item"><a class="btn btn-warning fw-bold ms-lg-3 text-dark" href="admissions.html">Enroll Now</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <header class="bg-light py-5 border-bottom">
-        <div class="container px-5">
-            <div class="row gx-5 justify-content-center">
-                <div class="col-lg-8">
-                    <div class="text-center my-5">
-                        <h1 class="display-4 fw-bolder text-dark mb-2">BGB Group of Schools, Akure</h1>
-                        <p class="lead mb-4">Raising Future Greats through Excellence and Discipline.</p>
-                        <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
-                            <a class="btn btn-primary btn-lg px-4 me-sm-3" href="admissions.html">Online Admission</a>
-                            <a class="btn btn-outline-dark btn-lg px-4" href="about.html">Learn More</a>
-                        </div>
-                    </div>
+    <div id="heroCarousel" class="carousel slide hero-slider" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="assets/images/activity1.jpg" class="d-block w-100" alt="Recent Assembly">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2 class="display-4 fw-bold">Nurturing Excellence in Akure</h2>
+                    <p>Raising future greats through quality education and discipline.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="assets/images/activity2.jpg" class="d-block w-100" alt="Inter-house Sports">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2 class="display-4 fw-bold">Inter-house Sports Festival</h2>
+                    <p>Building teamwork and physical fitness in our students.</p>
                 </div>
             </div>
         </div>
-    </header>
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
 
-    <section class="py-5">
-        <div class="container px-5 my-5">
-            <div class="row gx-5">
-                <div class="col-lg-4 mb-5 mb-lg-0">
-                    <h2 class="h4 fw-bolder">Preschool</h2>
-                    <p>A nurturing environment where early learners begin their journey of discovery and growth.</p>
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <div class="p-4 bg-white rounded shadow-sm">
+                        <i class="fas fa-child fa-3x text-primary mb-3"></i>
+                        <h5>Preschool & Primary</h5>
+                        <p class="small text-muted">A solid foundation for early learners.</p>
+                    </div>
                 </div>
-                <div class="col-lg-4 mb-5 mb-lg-0">
-                    <h2 class="h4 fw-bolder">Primary</h2>
-                    <p>Building a solid academic foundation with a focus on core subjects and character development.</p>
+                <div class="col-md-4">
+                    <div class="p-4 bg-white rounded shadow-sm border-top border-primary border-4">
+                        <i class="fas fa-book-reader fa-3x text-primary mb-3"></i>
+                        <h5>Secondary School</h5>
+                        <p class="small text-muted">Excellence in JSS and SSS education.</p>
+                    </div>
                 </div>
-                <div class="col-lg-4">
-                    <h2 class="h4 fw-bolder">Secondary</h2>
-                    <p>Approved WAEC & NECO center providing top-tier preparation for senior secondary examinations.</p>
+                <div class="col-md-4">
+                    <div class="p-4 bg-white rounded shadow-sm">
+                        <i class="fas fa-microscope fa-3x text-primary mb-3"></i>
+                        <h5>Approved Exam Center</h5>
+                        <p class="small text-muted">Official center for WAEC and NECO.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="py-5 bg-dark">
-        <div class="container px-5"><p class="m-0 text-center text-white">Copyright &copy; BGB Group of Schools 2026. Akure, Ondo State.</p></div>
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center section-title">Recent Activities</h2>
+            <div class="row g-4 mt-2">
+                <div class="col-md-4">
+                    <div class="card activity-card">
+                        <img src="assets/images/gallery1.jpg" class="card-img-top" alt="World Book Day">
+                        <div class="card-body">
+                            <h6>World Book Day Celebration</h6>
+                            <p class="text-muted small">Promoting the culture of reading among students.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card activity-card">
+                        <img src="assets/images/gallery2.jpg" class="card-img-top" alt="Mother's Day">
+                        <div class="card-body">
+                            <h6>Mother's Day Special</h6>
+                            <p class="text-muted small">Honoring the incredible mothers of our students.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card activity-card">
+                        <img src="assets/images/gallery3.jpg" class="card-img-top" alt="Science Lab">
+                        <div class="card-body">
+                            <h6>Science Practical Session</h6>
+                            <p class="text-muted small">Hands-on learning in our approved laboratories.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center section-title">Follow Us on Instagram</h2>
+            <p class="text-center mb-4"><a href="https://instagram.com/bgbschools" class="text-primary fw-bold" target="_blank">@bgbschools</a></p>
+            
+            <div class="instagram-placeholder text-center">
+                <i class="fab fa-instagram fa-4-x mb-3" style="color: #E1306C;"></i>
+                <h4>Latest from our Feed</h4>
+                <p>Visit our profile to see the latest updates, videos, and news from BGB Schools.</p>
+                <a href="https://instagram.com/bgbschools" target="_blank" class="btn btn-outline-danger px-4">View Gallery</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h6>BGB Group of Schools</h6>
+                    <p class="small text-muted">Akure, Ondo State, Nigeria.<br>Raising future greats.</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="social-links">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://instagram.com/bgbschools" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 text-end">
+                    <p class="small">&copy; 2026 BGB Schools. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/main.js"></script>
 </body>
 </html>
